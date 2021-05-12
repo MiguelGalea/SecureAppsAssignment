@@ -45,14 +45,10 @@ namespace WebApplication1
              .AddDefaultUI()
              .AddDefaultTokenProviders();
 
-
-
             services.AddControllersWithViews();
             services.AddRazorPages();
 
             //restrict the no. of times the user is allowed to guess his/her password
-
-
 
             services.Configure<IdentityOptions>(
                  options =>
@@ -65,16 +61,13 @@ namespace WebApplication1
 
             DependencyContainer.RegisterServices(services, Configuration.GetConnectionString("DefaultConnection"));
 
-           services.AddAuthentication()
-                  .AddGoogle(options =>
-                  {
-                      IConfigurationSection googleAuthNSection =
-                          Configuration.GetSection("Authentication:Google");
-
-                      options.ClientId = googleAuthNSection["ClientId"];
-                      options.ClientSecret = googleAuthNSection["ClientSecret"];
-                  });
-          
+            services.AddAuthentication()
+               .AddGoogle(options =>
+               {
+                   options.ClientId = Configuration["Authentication:Google:ClientId"];
+                   options.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
+                   options.CallbackPath = "/signin-google";
+               });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

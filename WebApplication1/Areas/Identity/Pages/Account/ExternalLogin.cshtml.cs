@@ -100,7 +100,7 @@ namespace WebApplication1.Areas.Identity.Pages.Account
                 bool confirmation = await _userManager.IsInRoleAsync(currentlylogginguser, "TEACHER");
                 if (!confirmation)
                 {
-                    //return to login page
+                    return RedirectToPage("./Login", new { ReturnUrl = returnUrl });
                 }
             }
 

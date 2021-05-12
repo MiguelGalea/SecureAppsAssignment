@@ -1,0 +1,443 @@
+2021-05-12T11:35:47.7008235+02:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-05-12T11:35:47.7054044+02:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-05-12T11:35:47.7068263+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-05-12T11:35:47.7084724+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-05-12T11:35:47.7098478+02:00  [INF] Content root path: "E:\School\Level 6\Second Year\Second Semester\Securing Applications\Assignment\WebApplication1" (b5d60022)
+2021-05-12T11:35:49.5730529+02:00 0HM8L559D8GGJ:00000001 [INF] Home Index accessed (f306b1a0)
+2021-05-12T11:35:56.3835321+02:00 0HM8L559D8GGJ:00000009 [ERR] Failed executing DbCommand ("57"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastLoggedIn], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PrivateKey], [a].[PublicKey], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0" (627a98df)
+2021-05-12T11:35:56.4387145+02:00 0HM8L559D8GGJ:00000009 [ERR] An exception occurred while iterating over the results of a query for context type '"WebApplication1.Data.ApplicationDbContext"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'PrivateKey'.
+Invalid column name 'PublicKey'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:a33c8360-4c88-4b88-a7f5-01536e229a07
+Error Number:207,State:1,Class:16" (f5c7ac34)
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'PrivateKey'.
+Invalid column name 'PublicKey'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:a33c8360-4c88-4b88-a7f5-01536e229a07
+Error Number:207,State:1,Class:16
+2021-05-12T11:35:56.5661167+02:00 0HM8L559D8GGJ:00000009 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'PrivateKey'.
+Invalid column name 'PublicKey'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.FindByNameAsync(String userName)
+   at WebApplication1.Areas.Identity.Pages.Account.ExternalLoginModel.OnGetCallbackAsync(String returnUrl, String remoteError) in E:\School\Level 6\Second Year\Second Semester\Securing Applications\Assignment\WebApplication1\Areas\Identity\Pages\Account\ExternalLogin.cshtml.cs:line 90
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.ExecutorFactory.GenericTaskHandlerMethod.Convert[T](Object taskAsObject)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.ExecutorFactory.GenericTaskHandlerMethod.Execute(Object receiver, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeHandlerMethodAsync()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeNextPageFilterAsync()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Rethrow(PageHandlerExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+ClientConnectionId:a33c8360-4c88-4b88-a7f5-01536e229a07
+Error Number:207,State:1,Class:16
+2021-05-12T11:37:07.6092488+02:00  [INF] Application is shutting down... (90f52c38)
+2021-05-12T11:37:32.5307438+02:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-05-12T11:37:32.5350057+02:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-05-12T11:37:32.5364145+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-05-12T11:37:32.5375042+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-05-12T11:37:32.5386365+02:00  [INF] Content root path: "E:\School\Level 6\Second Year\Second Semester\Securing Applications\Assignment\WebApplication1" (b5d60022)
+2021-05-12T11:37:34.4766215+02:00 0HM8L568PEJFD:00000001 [INF] Home Index accessed (f306b1a0)
+2021-05-12T11:37:37.9385678+02:00 0HM8L568PEJFD:00000007 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Exception: An error was encountered while handling the remote login.
+ ---> System.Exception: OAuth token endpoint failure: Status: Unauthorized;Headers: Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Date: Wed, 12 May 2021 09:37:36 GMT
+Pragma: no-cache
+Vary: X-Origin, Referer, Origin,Accept-Encoding
+Server: scaffolding on HTTPServer2
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Alt-Svc: h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Accept-Ranges: none
+Transfer-Encoding: chunked
+;Body: {
+  "error": "invalid_client",
+  "error_description": "Unauthorized"
+};
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-05-12T11:37:55.1625075+02:00 0HM8L568PEJFD:00000009 [INF] Home Index accessed (f306b1a0)
+2021-05-12T11:38:01.4388202+02:00 0HM8L568PEJFD:00000011 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Exception: An error was encountered while handling the remote login.
+ ---> System.Exception: OAuth token endpoint failure: Status: Unauthorized;Headers: Date: Wed, 12 May 2021 09:38:00 GMT
+Pragma: no-cache
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Vary: X-Origin, Referer, Origin,Accept-Encoding
+Server: scaffolding on HTTPServer2
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Alt-Svc: h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Accept-Ranges: none
+Transfer-Encoding: chunked
+;Body: {
+  "error": "invalid_client",
+  "error_description": "Unauthorized"
+};
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-05-12T11:38:27.1227743+02:00  [INF] Application is shutting down... (90f52c38)
+2021-05-12T11:40:39.2298022+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-05-12T11:40:39.2367835+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-05-12T11:40:39.2381848+02:00  [INF] Content root path: "E:\School\Level 6\Second Year\Second Semester\Securing Applications\Assignment\WebApplication1" (b5d60022)
+2021-05-12T11:40:39.3232934+02:00 80000004-0004-fd00-b63f-84710c7967bb [INF] Home Index accessed (f306b1a0)
+2021-05-12T11:40:43.0855837+02:00 80000006-0004-fd00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Exception: An error was encountered while handling the remote login.
+ ---> System.Exception: OAuth token endpoint failure: Status: Unauthorized;Headers: Date: Wed, 12 May 2021 09:40:42 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Vary: X-Origin, Referer, Origin,Accept-Encoding
+Server: scaffolding on HTTPServer2
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Alt-Svc: h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Accept-Ranges: none
+Transfer-Encoding: chunked
+;Body: {
+  "error": "invalid_client",
+  "error_description": "Unauthorized"
+};
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-05-12T11:49:57.7494181+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-05-12T11:49:57.7565314+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-05-12T11:49:57.7581325+02:00  [INF] Content root path: "E:\School\Level 6\Second Year\Second Semester\Securing Applications\Assignment\WebApplication1" (b5d60022)
+2021-05-12T11:49:57.8459643+02:00 80000007-000a-ff00-b63f-84710c7967bb [INF] Home Index accessed (f306b1a0)
+2021-05-12T11:50:01.0168872+02:00 8000000a-0000-fd00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Exception: An error was encountered while handling the remote login.
+ ---> System.Exception: OAuth token endpoint failure: Status: Unauthorized;Headers: Date: Wed, 12 May 2021 09:50:00 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Vary: X-Origin, Referer, Origin,Accept-Encoding
+Server: scaffolding on HTTPServer2
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Alt-Svc: h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Accept-Ranges: none
+Transfer-Encoding: chunked
+;Body: {
+  "error": "invalid_client",
+  "error_description": "Unauthorized"
+};
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-05-12T11:52:00.9509658+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-05-12T11:52:00.9579682+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-05-12T11:52:00.9596081+02:00  [INF] Content root path: "E:\School\Level 6\Second Year\Second Semester\Securing Applications\Assignment\WebApplication1" (b5d60022)
+2021-05-12T11:52:01.0478192+02:00 80000003-0002-fe00-b63f-84710c7967bb [INF] Home Index accessed (f306b1a0)
+2021-05-12T11:52:07.5133697+02:00 80000004-0006-fd00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Exception: An error was encountered while handling the remote login.
+ ---> System.Exception: OAuth token endpoint failure: Status: Unauthorized;Headers: Date: Wed, 12 May 2021 09:52:06 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Vary: X-Origin, Referer, Origin,Accept-Encoding
+Server: scaffolding on HTTPServer2
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Alt-Svc: h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Accept-Ranges: none
+Transfer-Encoding: chunked
+;Body: {
+  "error": "invalid_client",
+  "error_description": "Unauthorized"
+};
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-05-12T11:52:26.0891771+02:00 80000006-0006-fd00-b63f-84710c7967bb [INF] Home Index accessed (f306b1a0)
+2021-05-12T11:57:40.7466800+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-05-12T11:57:40.7548805+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-05-12T11:57:40.7564303+02:00  [INF] Content root path: "E:\School\Level 6\Second Year\Second Semester\Securing Applications\Assignment\WebApplication1" (b5d60022)
+2021-05-12T11:57:40.8410179+02:00 80000002-000b-fe00-b63f-84710c7967bb [INF] Home Index accessed (f306b1a0)
+2021-05-12T11:57:43.8845633+02:00 80000006-0002-ff00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Exception: An error was encountered while handling the remote login.
+ ---> System.Exception: OAuth token endpoint failure: Status: Unauthorized;Headers: Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Date: Wed, 12 May 2021 09:57:42 GMT
+Vary: X-Origin, Referer, Origin,Accept-Encoding
+Server: scaffolding on HTTPServer2
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Alt-Svc: h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Accept-Ranges: none
+Transfer-Encoding: chunked
+;Body: {
+  "error": "invalid_client",
+  "error_description": "Unauthorized"
+};
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-05-12T11:58:40.6120631+02:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-05-12T11:58:40.6159194+02:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-05-12T11:58:40.6178621+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-05-12T11:58:40.6189978+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-05-12T11:58:40.6200304+02:00  [INF] Content root path: "E:\School\Level 6\Second Year\Second Semester\Securing Applications\Assignment\WebApplication1" (b5d60022)
+2021-05-12T11:58:41.2692535+02:00 0HM8L5I2M26F1:00000001 [INF] Home Index accessed (f306b1a0)
+2021-05-12T11:58:46.7041326+02:00 0HM8L5I2M26F1:00000017 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Exception: An error was encountered while handling the remote login.
+ ---> System.Exception: OAuth token endpoint failure: Status: Unauthorized;Headers: Date: Wed, 12 May 2021 09:58:45 GMT
+Pragma: no-cache
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Vary: X-Origin, Referer, Origin,Accept-Encoding
+Server: scaffolding on HTTPServer2
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Alt-Svc: h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Accept-Ranges: none
+Transfer-Encoding: chunked
+;Body: {
+  "error": "invalid_client",
+  "error_description": "Unauthorized"
+};
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-05-12T12:00:25.5604178+02:00  [INF] Application is shutting down... (90f52c38)
+2021-05-12T12:00:29.1971924+02:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-05-12T12:00:29.2023631+02:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-05-12T12:00:29.2041877+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-05-12T12:00:29.2056706+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-05-12T12:00:29.2071893+02:00  [INF] Content root path: "E:\School\Level 6\Second Year\Second Semester\Securing Applications\Assignment\WebApplication1" (b5d60022)
+2021-05-12T12:00:29.8353039+02:00 0HM8L5J312VJN:00000001 [INF] Home Index accessed (f306b1a0)
+2021-05-12T12:00:34.3306443+02:00 0HM8L5J312VJN:00000007 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Exception: An error was encountered while handling the remote login.
+ ---> System.Exception: OAuth token endpoint failure: Status: Unauthorized;Headers: Date: Wed, 12 May 2021 10:00:33 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Vary: X-Origin, Referer, Origin,Accept-Encoding
+Server: scaffolding on HTTPServer2
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Alt-Svc: h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Accept-Ranges: none
+Transfer-Encoding: chunked
+;Body: {
+  "error": "invalid_client",
+  "error_description": "Unauthorized"
+};
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-05-12T12:08:29.3200145+02:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-05-12T12:08:29.3241775+02:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-05-12T12:08:29.3254314+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-05-12T12:08:29.3265158+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-05-12T12:08:29.3275410+02:00  [INF] Content root path: "E:\School\Level 6\Second Year\Second Semester\Securing Applications\Assignment\WebApplication1" (b5d60022)
+2021-05-12T12:08:30.0811869+02:00 0HM8L5NI3V2I7:00000001 [INF] Home Index accessed (f306b1a0)
+2021-05-12T12:09:03.3400058+02:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-05-12T12:09:03.3442722+02:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-05-12T12:09:03.3456743+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-05-12T12:09:03.3467300+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-05-12T12:09:03.3477939+02:00  [INF] Content root path: "E:\School\Level 6\Second Year\Second Semester\Securing Applications\Assignment\WebApplication1" (b5d60022)
+2021-05-12T12:09:05.2151736+02:00 0HM8L5NS805C3:00000001 [INF] Home Index accessed (f306b1a0)
+2021-05-12T12:09:08.3041286+02:00 0HM8L5NS805C3:00000007 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Exception: An error was encountered while handling the remote login.
+ ---> System.Exception: OAuth token endpoint failure: Status: Unauthorized;Headers: Pragma: no-cache
+Date: Wed, 12 May 2021 10:09:07 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Vary: X-Origin, Referer, Origin,Accept-Encoding
+Server: scaffolding on HTTPServer2
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Alt-Svc: h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Accept-Ranges: none
+Transfer-Encoding: chunked
+;Body: {
+  "error": "invalid_client",
+  "error_description": "Unauthorized"
+};
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-05-12T12:09:15.3531544+02:00  [INF] Application is shutting down... (90f52c38)
+2021-05-12T12:09:42.4021773+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-05-12T12:09:42.4093100+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-05-12T12:09:42.4109224+02:00  [INF] Content root path: "E:\School\Level 6\Second Year\Second Semester\Securing Applications\Assignment\WebApplication1" (b5d60022)
+2021-05-12T12:09:42.4995323+02:00 8000000b-0004-ff00-b63f-84710c7967bb [INF] Home Index accessed (f306b1a0)
+2021-05-12T12:09:45.3686130+02:00 80000006-0008-ff00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Exception: An error was encountered while handling the remote login.
+ ---> System.Exception: OAuth token endpoint failure: Status: Unauthorized;Headers: Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Date: Wed, 12 May 2021 10:09:44 GMT
+Pragma: no-cache
+Vary: X-Origin, Referer, Origin,Accept-Encoding
+Server: scaffolding on HTTPServer2
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Alt-Svc: h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Accept-Ranges: none
+Transfer-Encoding: chunked
+;Body: {
+  "error": "invalid_client",
+  "error_description": "Unauthorized"
+};
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-05-12T12:11:14.0629706+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-05-12T12:11:14.0697667+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-05-12T12:11:14.0713624+02:00  [INF] Content root path: "E:\School\Level 6\Second Year\Second Semester\Securing Applications\Assignment\WebApplication1" (b5d60022)
+2021-05-12T12:11:14.1571780+02:00 80000003-0005-fe00-b63f-84710c7967bb [INF] Home Index accessed (f306b1a0)
+2021-05-12T12:11:16.9716588+02:00 8000000d-000a-ff00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Exception: An error was encountered while handling the remote login.
+ ---> System.Exception: OAuth token endpoint failure: Status: Unauthorized;Headers: Pragma: no-cache
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Date: Wed, 12 May 2021 10:11:15 GMT
+Vary: X-Origin, Referer, Origin,Accept-Encoding
+Server: scaffolding on HTTPServer2
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Alt-Svc: h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Accept-Ranges: none
+Transfer-Encoding: chunked
+;Body: {
+  "error": "invalid_client",
+  "error_description": "Unauthorized"
+};
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-05-12T12:11:19.5555779+02:00 80000008-0002-ff00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Exception: An error was encountered while handling the remote login.
+ ---> System.Exception: OAuth token endpoint failure: Status: Unauthorized;Headers: Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Date: Wed, 12 May 2021 10:11:18 GMT
+Pragma: no-cache
+Vary: X-Origin, Referer, Origin,Accept-Encoding
+Server: scaffolding on HTTPServer2
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Alt-Svc: h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Accept-Ranges: none
+Transfer-Encoding: chunked
+;Body: {
+  "error": "invalid_client",
+  "error_description": "Unauthorized"
+};
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-05-12T12:11:32.7882297+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-05-12T12:11:32.7949013+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-05-12T12:11:32.7963948+02:00  [INF] Content root path: "E:\School\Level 6\Second Year\Second Semester\Securing Applications\Assignment\WebApplication1" (b5d60022)
+2021-05-12T12:11:32.9287950+02:00 80000004-0001-ff00-b63f-84710c7967bb [INF] Home Index accessed (f306b1a0)
+2021-05-12T12:12:00.4312000+02:00 80000008-0009-ff00-b63f-84710c7967bb [INF] User created an account using "Google" provider. (b6d39947)
+2021-05-12T12:12:00.5029312+02:00 80000006-0005-ff00-b63f-84710c7967bb [INF] Home Index accessed (f306b1a0)
+2021-05-12T12:13:29.8916683+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-05-12T12:13:29.8985044+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-05-12T12:13:29.8999657+02:00  [INF] Content root path: "E:\School\Level 6\Second Year\Second Semester\Securing Applications\Assignment\WebApplication1" (b5d60022)
+2021-05-12T12:13:29.9865547+02:00 8000000a-0008-fd00-b63f-84710c7967bb [INF] Home Index accessed (f306b1a0)
+2021-05-12T12:13:39.7003282+02:00 8000000e-0002-ff00-b63f-84710c7967bb [INF] "Miguel Galea" logged in with "Google" provider. (107abac5)
+2021-05-12T12:13:39.7126876+02:00 80000010-0002-ff00-b63f-84710c7967bb [INF] Home Index accessed (f306b1a0)
+2021-05-12T12:13:45.6433126+02:00 80000013-000a-ff00-b63f-84710c7967bb [INF] Home Index accessed (f306b1a0)
+2021-05-12T12:23:46.2158812+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-05-12T12:23:46.2233763+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-05-12T12:23:46.2249294+02:00  [INF] Content root path: "E:\School\Level 6\Second Year\Second Semester\Securing Applications\Assignment\WebApplication1" (b5d60022)
+2021-05-12T12:23:46.3172431+02:00 8000000c-0006-fd00-b63f-84710c7967bb [INF] Home Index accessed (f306b1a0)
+2021-05-12T12:23:53.2356359+02:00 80000012-0006-fd00-b63f-84710c7967bb [INF] User created an account using "Google" provider. (b6d39947)
+2021-05-12T12:23:53.4725875+02:00 80000012-0006-fd00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Role TEACHER does not exist.
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.AddToRoleAsync(TUser user, String normalizedRoleName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.AddToRoleAsync(TUser user, String role)
+   at WebApplication1.Areas.Identity.Pages.Account.ExternalLoginModel.OnPostConfirmationAsync(String returnUrl) in E:\School\Level 6\Second Year\Second Semester\Securing Applications\Assignment\WebApplication1\Areas\Identity\Pages\Account\ExternalLogin.cshtml.cs:line 184
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.ExecutorFactory.GenericTaskHandlerMethod.Convert[T](Object taskAsObject)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.ExecutorFactory.GenericTaskHandlerMethod.Execute(Object receiver, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeHandlerMethodAsync()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeNextPageFilterAsync()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Rethrow(PageHandlerExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-05-12T12:24:46.5317193+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-05-12T12:24:46.5389749+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-05-12T12:24:46.5406344+02:00  [INF] Content root path: "E:\School\Level 6\Second Year\Second Semester\Securing Applications\Assignment\WebApplication1" (b5d60022)
+2021-05-12T12:24:46.6275845+02:00 80000014-0006-fd00-b63f-84710c7967bb [INF] Home Index accessed (f306b1a0)
+2021-05-12T12:24:52.5873799+02:00 80000019-000a-ff00-b63f-84710c7967bb [INF] User created an account using "Google" provider. (b6d39947)
+2021-05-12T12:24:52.6548306+02:00 8000001b-000a-ff00-b63f-84710c7967bb [INF] Home Index accessed (f306b1a0)
