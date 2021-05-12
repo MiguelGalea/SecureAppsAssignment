@@ -29,6 +29,7 @@ namespace WebApplication1.Controllers
         public IActionResult Index()
         {
             var list = _tasksService.GetTasks();
+            ViewBag.Tasks = list;
             return View(list);
         }
 
@@ -68,12 +69,23 @@ namespace WebApplication1.Controllers
             }
         }
 
-        public IActionResult Submission(SubmissionViewModel newSub)
+        [HttpGet]
+        [Authorize(Roles = "STUDENT")]
+        public IActionResult Upload()
+        { return View(); }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "STUDENT")]
+        public IActionResult Upload(SubmissionViewModel newSub)
         {
+            var tasks = _tasksService.GetTasks();
+            ViewBag.Tasks = tasks;
+
             newSub.Id = new Guid();
             newSub.Owner = HttpContext.User.Identity.Name;
             newSub.TimeSubmitted = DateTime.Now;
-
+            
             if (string.IsNullOrEmpty(newSub.FileName))
             {
                 _logger.LogError("Title is empty or NULL");

@@ -1,33 +1,40 @@
-﻿@model ShoppingCart.Application.ViewModels.SubmissionViewModel
+﻿@model IEnumerable<ShoppingCart.Application.ViewModels.SubmissionViewModel>
 
-@{ ViewData["Title"] = "Upload"; }
+@{ ViewData["Title"] = "Submission"; }
 
 <h1>Submit</h1>
 
 <hr />
+@foreach (var t in Model)
+{
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create" enctype="multipart/form-data">
+        <form asp-action="Upload" enctype="multipart/form-data">
             @Html.AntiForgeryToken()
 
             <div asp-validation-summary="All" class="text-danger"></div>
 
             <div class="form-group">
-                <label asp-for="FileName" class="control-label">Title</label>
-                <input asp-for="FileName" class="form-control" />
-                <span asp-validation-for="FileName" class="text-danger"></span>
+                <label asp-for="@t.FileName" class="control-label">Title</label>
+                <input asp-for="@t.FileName" class="form-control" />
+                <span asp-validation-for="@t.FileName" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
+                <label asp-for="@t.Description" class="control-label"></label>
+                <input asp-for="@t.Description" class="form-control" />
+                <span asp-validation-for="@t.Description" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="Path" class="control-label"></label>
+                <label asp-for="@t.Path" class="control-label"></label>
                 <input type="file" name="file" class="form-control" />
                 <span name="file" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="@t.TaskId" class="control-label"></label>
+                <input type="hidden" name="taskId" value ="@t.TaskId" />
             </div>
 
             <div class="form-group">
@@ -35,7 +42,7 @@
             </div>
         </form>
     </div>
-</div>
+</div>}
 
 <div>
     <a asp-action="Index">Back to List</a>

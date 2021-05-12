@@ -18,9 +18,8 @@
                 @Html.DisplayNameFor(model => model.Deadline)
             </th>
             <th>
-                @Html.DisplayNameFor(model => "Submit")
+                Submit
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -42,7 +41,7 @@
                 @Html.DisplayFor(modelItem => item.Deadline)
             </td>
             <td>
-                <a class="btn btn-primary" href="../Views/Task/Upload.cshtml?id="+ model.Id>Submit Task</a>
+                <a class="btn btn-primary" href="Task/Upload">Submit Task</a>
             </td>
         </tr>
     }
