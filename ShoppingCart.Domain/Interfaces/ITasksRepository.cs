@@ -8,7 +8,7 @@ namespace ShoppingCart.Domain.Interfaces
 {
     public interface ITasksRepository
     {
-        IQueryable<Task> GetTasks(string teacherEmail);
+        IQueryable<Task> GetTasks();
 
         Guid AddTask(Task t);
     }

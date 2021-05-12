@@ -1,0 +1,50 @@
+﻿@model IEnumerable<ShoppingCart.Application.ViewModels.TaskViewModel>
+
+@{ ViewData["Title"] = "Index"; }
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Deadline)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => "Submit")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @{var description = System.Net.WebUtility.HtmlDecode(item.Description);}
+                <span>@description</span>
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Deadline)
+            </td>
+            <td>
+                <a class="btn btn-primary" href="../Views/Task/Upload.cshtml?id="+ model.Id>Submit Task</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

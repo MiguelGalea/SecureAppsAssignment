@@ -17,6 +17,7 @@ using WebApplication1.Models;
 using System.Net.Mail;
 using SmtpClient = System.Net.Mail.SmtpClient;
 using System.Net;
+using WebApplication1.Utility;
 
 namespace WebApplication1.Areas.Identity.Pages.Account
 {
@@ -58,7 +59,12 @@ namespace WebApplication1.Areas.Identity.Pages.Account
             [Display(Name = "Email")]
             public string Email { get; set; }
 
+            public string PublicKey { get; set; }
+
+            public string PrivateKey { get; set; }
+
             public string Password = GenerateRandomPassword();
+
         }
 
         public static string GenerateRandomPassword(PasswordOptions opts = null)
@@ -122,7 +128,12 @@ namespace WebApplication1.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email, FirstName = Input.FirstName, LastName = Input.LastName };
+                //add keys
+                AsymmetricKeys myKeys = Encryption.GenerateAsymmetricKeys();
+                Input.PublicKey = myKeys.PublicKey;
+                Input.PrivateKey = myKeys.PrivateKey;
+
+                var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email, FirstName = Input.FirstName, LastName = Input.LastName, PublicKey = Input.PublicKey, PrivateKey = Input.PrivateKey };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {

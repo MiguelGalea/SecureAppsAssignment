@@ -26,9 +26,9 @@ namespace ShoppingCart.Data.Repositories
             return t.Id;
         }
 
-        public IQueryable<Task> GetTasks(string teacherEmail)
+        public IQueryable<Task> GetTasks()
         {
-            return _context.Tasks.Where(x => x.Teacher == teacherEmail);
+            return _context.Tasks;//.Where(x => x.Teacher == teacherEmail);
         }
     }
 }

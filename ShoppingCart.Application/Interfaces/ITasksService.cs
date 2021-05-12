@@ -8,7 +8,7 @@ namespace ShoppingCart.Application.Interfaces
 {
     public interface ITasksService
     {
-        IQueryable<TaskViewModel> GetTasks(string teacherEmail);
+        IQueryable<TaskViewModel> GetTasks();
 
         void AddTask(TaskViewModel model);
 

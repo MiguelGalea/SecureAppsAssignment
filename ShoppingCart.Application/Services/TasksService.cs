@@ -26,9 +26,9 @@ namespace ShoppingCart.Application.Services
             _tasksRepo.AddTask(_autoMapper.Map<Task>(model));
         }
 
-        public IQueryable<TaskViewModel> GetTasks(string teacherEmail)
+        public IQueryable<TaskViewModel> GetTasks()
         {
-            return _tasksRepo.GetTasks(teacherEmail).ProjectTo<TaskViewModel>(_autoMapper.ConfigurationProvider);
+            return _tasksRepo.GetTasks().ProjectTo<TaskViewModel>(_autoMapper.ConfigurationProvider);
         }
     }
 }
