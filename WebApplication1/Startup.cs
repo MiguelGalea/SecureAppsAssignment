@@ -77,8 +77,8 @@ namespace WebApplication1
 
             //if (env.IsDevelopment())
             //{
-            //    app.UseDeveloperExceptionPage();
-            //    app.UseDatabaseErrorPage();
+            app.UseDeveloperExceptionPage();
+            app.UseDatabaseErrorPage();
             //}
             //else //production mode
             //{

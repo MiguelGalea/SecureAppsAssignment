@@ -108,13 +108,12 @@ namespace WebApplication1.Controllers
                             }
                             catch (Exception ex)
                             {
-                                //log
-                                _logger.LogError(ex, "Error happend while saving file");
+                                //log  
+                                _logger.LogError(ex, "Error happened while saving file");
 
                                 return View("Error", new ErrorViewModel() { Message = "Error while saving the file. Try again later" });
                             }
                         }
-
                     }
                 }
                 else

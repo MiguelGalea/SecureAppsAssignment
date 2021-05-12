@@ -9,7 +9,7 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
-    [Authorize(Roles ="ADMIN,TEACHER")]
+    [Authorize(Roles = "TEACHER")]
     public class RolesManagementController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -39,11 +39,11 @@ namespace WebApplication1.Controllers
                 {
                     await _userManager.AddToRoleAsync(returnedUser, role);
 
-                    TempData["message"] = "successfully allocated";
+                    TempData["message"] = "Successfully allocated";
                 }
                 else
                 {
-                    TempData["error"] = "user not found";
+                    TempData["error"] = "User not found";
                 }
             }
             else

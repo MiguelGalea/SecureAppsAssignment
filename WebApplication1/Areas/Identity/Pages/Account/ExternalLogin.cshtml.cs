@@ -82,20 +82,17 @@ namespace WebApplication1.Areas.Identity.Pages.Account
                 return RedirectToPage("./Login", new { ReturnUrl = returnUrl });
             }
 
-
-            //HERE we are going to check whether email obtained from the info.Principal.Claims.ToList()[4].Value
-            //you check with db whether
+            //Check the DB whether
             //1. the email already exists
             string email = info.Principal.Claims.ToList()[4].Value;
             var currentlylogginguser = await _userManager.FindByNameAsync(email);
-            if(currentlylogginguser == null) {//return to login page
+            if(currentlylogginguser == null) {
+                return RedirectToPage("./Login", new { ReturnUrl = returnUrl });
             }
             else
-            {//the email already exists
-             //confirm the role ....is he/she a teacher??
-
+            {
                 //2. the email has a Teacher role associated with it
-                //if any of the two conditions above fail >>> redirect to login page
+                //if any of the two conditions above fail, redirect to login page
 
                 bool confirmation = await _userManager.IsInRoleAsync(currentlylogginguser, "TEACHER");
                 if (!confirmation)

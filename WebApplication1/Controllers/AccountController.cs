@@ -13,19 +13,14 @@ namespace WebApplication1.Controllers
         private readonly UserManager<ApplicationUser> _userManager;
         
         public AccountController(UserManager<ApplicationUser> userManager)
-        { _userManager = userManager; }
+        { _userManager = userManager; }        
         
-        
-        //public async Task<IActionResult> GenerateAccount(StudentCreationModel model)
-        //{
+        public async Task<IActionResult> GenerateAccount(StudentModel model)
+        {
+            var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName };
+            var result = await _userManager.CreateAsync(user, model.Password);
 
-
-        //    var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName };
-        //    var result = await _userManager.CreateAsync(user, model.Password);
-
-
-
-        //    return View();
-        //}
+            return View();
+        }
     }
 }
